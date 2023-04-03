@@ -3,6 +3,7 @@ body {
     background-color: blueviolet;
     margin-top: 25vh;
     justify-content: center;
+    column-gap: 2vw;
 }
 .conteudo {
     display: flex;
@@ -33,4 +34,16 @@ input[type="radio"] {
     background: url(img/img-01.png);
     background-repeat: no-repeat;
     background-size: auto;
+}
+button {
+    border-radius: 100%;
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    height: 5vw;
+    width: 5vw;
+    align-self: center;
+}
+button:hover {
+    opacity: 1;
 }
