@@ -56,3 +56,16 @@ function before() {
 
 }   
 
+let seletores = document.querySelectorAll("input")
+function presionadoSeletor(e) {
+    for (let radio of seletores) {
+       console.log(radio.value)
+        radio.value = "off"
+    }
+    e.target.value = "on"
+}
+
+for (let radio of seletores) {
+    radio.addEventListener("click", presionadoSeletor)
+    
+}
