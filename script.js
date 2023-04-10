@@ -69,19 +69,38 @@ for (let radio of seletores) {
     
 }
 
-function timerfunction() {
-    let buttonValue = document.querySelector(".timer")
-    let imgButton = document.querySelector(".imgtrade")
-    console.log(buttonValue.value)
-    switch(buttonValue.value){
-        case "pause":
-            imgButton.src = "img/play.png";
-            buttonValue.value = "play";
-            break;
-        case "play": 
-            imgButton.src = "img/pause.png";
-            buttonValue.value = "pause";
-            break;
-    }
-   
+let timer;
+
+function timerFunction() {
+  let buttonValue = document.querySelector(".timer");
+  let imgButton = document.querySelector(".imgtrade");
+
+  function play() {
+    imgButton.src = "img/pause.png";
+    buttonValue.value = "pause";
+    after();
+    timer = setInterval(after, 3000);
+  }
+
+  function pause() {
+    imgButton.src = "img/play.png";
+    buttonValue.value = "play";
+    clearInterval(timer);
+  }
+
+  switch (buttonValue.value) {
+    case "play":
+      play();
+      break;
+
+    case "pause":
+      pause();
+      break;
+  }
 }
+
+
+
+
+
+

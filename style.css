@@ -57,13 +57,14 @@ input[type=radio] {
 }
 
 .timer {
-  
+  background-color: blueviolet;
+  margin: 0;
+  border: 0;
 }
 
 .imgtrade {
-  width: 5vw;
-  height: 5vw;
-  opacity: 1;
+  width: 6vw;
+  height: 6vw;
 }
 
 /*# sourceMappingURL=style.css.map */
