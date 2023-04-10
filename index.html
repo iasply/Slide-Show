@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="before() "><</button>
-    <div class="conteudo">
-        <div class="containerimg"></div>
-        <div class="seletores">
-            <input name="img" class="img1" id="img1" onclick="displayimg()" value="on" type="radio">
-            <input name="img" class="img2" id="img2" onclick="displayimg()" value="off" type="radio">
-            <input name="img" class="img3" id="img3" onclick="displayimg()"  value="off" type="radio">
+    <button class="timer" onclick="timerfunction()" value="play" ><img src="img/play.png" alt="" class="imgtrade" ></button>play auto routete
+    <div class="principal">
+        <button onclick="before() " class="trocas"><</button>
+        <div class="conteudo">
+            <div class="containerimg"></div>
+            <div class="seletores">
+                <input name="img" class="img1" id="img1" onclick="displayimg()" value="on" type="radio">
+                <input name="img" class="img2" id="img2" onclick="displayimg()" value="off" type="radio">
+                <input name="img" class="img3" id="img3" onclick="displayimg()"  value="off" type="radio">
+            </div>
         </div>
+        <button onclick="after() " class="trocas" >></button>
+        
     </div>
-    <button onclick="after() ">></button>
-    
     <script src="script.js"></script>
 </body>
 </html>

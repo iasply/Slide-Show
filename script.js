@@ -59,7 +59,6 @@ function before() {
 let seletores = document.querySelectorAll("input")
 function presionadoSeletor(e) {
     for (let radio of seletores) {
-       console.log(radio.value)
         radio.value = "off"
     }
     e.target.value = "on"
@@ -68,4 +67,21 @@ function presionadoSeletor(e) {
 for (let radio of seletores) {
     radio.addEventListener("click", presionadoSeletor)
     
+}
+
+function timerfunction() {
+    let buttonValue = document.querySelector(".timer")
+    let imgButton = document.querySelector(".imgtrade")
+    console.log(buttonValue.value)
+    switch(buttonValue.value){
+        case "pause":
+            imgButton.src = "img/play.png";
+            buttonValue.value = "play";
+            break;
+        case "play": 
+            imgButton.src = "img/pause.png";
+            buttonValue.value = "pause";
+            break;
+    }
+   
 }
